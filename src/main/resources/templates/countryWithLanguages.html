@@ -27,7 +27,8 @@
         <tbody>
         <tr th:each="country: ${countries}">
             <td th:text="${country.name}"></td>
-            <td th:if="${country.getLanguages()}" th:text="${country.getLanguages()}"></td>
+            <td th:if="${!country.getLanguages().isEmpty()}" th:text="${country.getLanguages()}"></td>
+            <td th:unless="${!country.getLanguages().isEmpty()}">brak danych</td>
         </tr>
         </tbody>
     </table>

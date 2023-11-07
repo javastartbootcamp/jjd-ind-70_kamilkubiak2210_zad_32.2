@@ -55,11 +55,10 @@ public class Country {
     @Column(name = "Code2")
     private String code2;
 
-    @OrderBy("Population DESC")
     @OneToMany(mappedBy = "country")
     private Collection<City> cities;
 
-    @OrderBy("Percentage DESC")
+    @OrderBy("percentage DESC")
     @OneToMany
     @JoinColumn(name = "countryCode")
     private Collection<CountryLanguage> languages;
