@@ -54,7 +54,7 @@ public class Country {
 
     @Column(name = "Code2")
     private String code2;
-
+    @OrderBy("population DESC")
     @OneToMany(mappedBy = "country")
     private Collection<City> cities;
 
