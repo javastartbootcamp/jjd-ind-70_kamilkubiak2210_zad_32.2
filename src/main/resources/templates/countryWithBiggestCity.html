@@ -29,7 +29,7 @@
         <tr th:each="country: ${countries}">
             <td th:text="${country.name}"></td>
             <td th:if="${country.getCities().size() > 0}" th:text="${country.getCities().get(0).getName()}"></td>
-            <td th:unless="${country.getCities().size() > 0}">brak danych</td>
+            <td th:unless="${country.getCities().size() > 0}" >brak danych</td>
             <td th:if="${country.getCities().size() > 0}" th:text="${country.getCities().get(0).getPopulation()}"></td>
             <td th:unless="${country.getCities().size() > 0}">brak danych</td>
         </tr>
